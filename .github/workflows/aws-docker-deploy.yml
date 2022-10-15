@@ -72,14 +72,14 @@ jobs:
 
         run: |
           
-          mkdir 331-backend
+              mkdir 331-backend
           
-          cp docker-compose-prod.yml 331-backend/docker-compose.yml
+              cp docker-compose-prod.yml 331-backend/docker-compose.yml
           
-          cd 331-backend
+              cd 331-backend
           
-          docker-compose -H ${{ secrets.HOST_SERVER }} down
+              docker-compose -H ${{ secrets.HOST_SERVER }} down
           
-          docker-compose -H ${{ secrets.HOST_SERVER }} pull
+              docker-compose -H ${{ secrets.HOST_SERVER }} pull
           
-          docker-compose -H ${{ secrets.HOST_SERVER }} up -d
+              docker-compose -H ${{ secrets.HOST_SERVER }} up -d
